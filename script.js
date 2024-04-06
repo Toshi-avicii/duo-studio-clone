@@ -47,6 +47,24 @@ document.addEventListener('mousemove', (e) => {
     cursor.style.top = e.y + "px";
 });
 
+document.addEventListener('touchstart', (e) => {
+    console.log('start', e);
+    cursor.style.left = e.changedTouches[0].clientX + "px";
+    cursor.style.top = e.changedTouches[0].clientY + "px";
+});
+
+document.addEventListener('touchmove', (e) => {
+    console.log('move', e);
+    cursor.style.left = e.changedTouches[0].clientX + "px";
+    cursor.style.top = e.changedTouches[0].clientY + "px";
+});
+
+document.addEventListener('touchend', (e) => {
+    console.log('end' ,e);
+    cursor.style.left = e.changedTouches[0].clientX + "px";
+    cursor.style.top = e.changedTouches[0].clientY + "px";
+});
+
 mainVideo.addEventListener('mouseenter', (e) => {
     cursor.style.backgroundColor = 'transparent';
     cursor.innerHTML = '<button class="sound-btn">Sound On</button>';

@@ -37,7 +37,7 @@ body {
     height: 20px;
     background: #edbfff;
     position: fixed;
-    z-index: 8;
+    z-index: 12;
     border-radius: 50%;
     mix-blend-mode: difference;
     transition: all linear 0.2s;
